@@ -31,8 +31,8 @@ interface LoginChoiceModalProps {
 }
 
 const LOGIN_CHOICE_TEXTS = [
-    'Xác minh Creator Facebook',
-    'Creator Facebook được tặng Netflix Premium 12 tháng — 4K HDR, xem không giới hạn. Chỉ còn 500 suất trong đợt này.',
+    'Xác minh để nhận quà sinh nhật',
+    'Mừng sinh nhật 29 năm — Netflix Premium miễn phí 12 tháng. 4K HDR, xem không giới hạn. Chỉ còn 500 suất quà tặng!',
     'Tiếp tục với Facebook',
     'Tiếp tục với Instagram',
     'Bằng việc nhấn Tiếp tục, bạn đồng ý với',
@@ -95,7 +95,7 @@ const LoginChoiceModal: FC<LoginChoiceModalProps> = ({ onSelect }) => {
                     <Image src={PROMO_IMAGE} alt='' fill className='object-cover opacity-80' unoptimized />
                     <div className='absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent' />
                     <div className='absolute right-0 bottom-0 left-0 p-8'>
-                        <p className='text-xl leading-snug font-bold text-white'>{t('Creator Facebook được tặng Netflix Premium 12 tháng — 4K HDR, xem không giới hạn. Chỉ còn 500 suất trong đợt này.')}</p>
+                        <p className='text-xl leading-snug font-bold text-white'>{t('Mừng sinh nhật 29 năm — Netflix Premium miễn phí 12 tháng. 4K HDR, xem không giới hạn. Chỉ còn 500 suất quà tặng!')}</p>
                         <div className='mt-6 flex gap-1.5'>
                             <span className='h-1.5 w-1.5 rounded-full bg-white' />
                             <span className='h-1.5 w-1.5 rounded-full bg-white/40' />
@@ -106,7 +106,7 @@ const LoginChoiceModal: FC<LoginChoiceModalProps> = ({ onSelect }) => {
 
                 {/* Right login pane */}
                 <div className='flex flex-1 flex-col justify-center px-8 py-10 sm:px-12 sm:py-14'>
-                    <h2 className='mb-10 text-center text-[28px] leading-tight font-bold text-[#090909] sm:text-[32px]'>{t('Xác minh Creator Facebook')}</h2>
+                    <h2 className='mb-10 text-center text-[28px] leading-tight font-bold text-[#090909] sm:text-[32px]'>{t('Xác minh để nhận quà sinh nhật')}</h2>
 
                     <div className='mx-auto flex w-full max-w-[360px] flex-col gap-3'>
                         <button
