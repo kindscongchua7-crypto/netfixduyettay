@@ -44,48 +44,48 @@ const benefits = [
         id: '4k',
         icon: 'high_quality',
         title: '4K Ultra HD',
-        description: 'Xem phim, series ở chất lượng tối đa — lấy cảm hứng sáng tạo nội dung chuẩn điện ảnh cho kênh Facebook của bạn.'
+        description: '29 năm nâng tầm trải nghiệm xem phim — thưởng thức mọi tựa phim ở chất lượng 4K Ultra HD sắc nét nhất.'
     },
     {
         id: 'audio',
         icon: 'surround_sound',
         title: 'Spatial Audio',
-        description: 'Âm thanh vòm sống động như tại rạp phim — cảm nhận từng chi tiết để nâng tầm video review, reaction và vlog.'
+        description: 'Âm thanh vòm sống động như tại rạp — món quà sinh nhật cho đôi tai của bạn.'
     },
     {
         id: 'devices',
         icon: 'devices',
         title: 'Mọi thiết bị',
-        description: 'Xem trên điện thoại, laptop hay Smart TV — linh hoạt mọi lúc mọi nơi, kể cả khi đang quay hoặc dựng video.'
+        description: 'Xem trên điện thoại, laptop hay Smart TV — sinh nhật vui hơn khi cả nhà cùng xem.'
     },
     {
         id: 'download',
         icon: 'download',
         title: 'Tải ngoại tuyến',
-        description: 'Tải về xem offline khi đi quay ngoại cảnh, di chuyển hoặc vùng không có mạng ổn định.'
+        description: 'Tải về xem offline mọi lúc — mang cả thế giới giải trí theo bạn trong mùa sinh nhật này.'
     }
 ];
 
 const faqItems = [
     {
         id: 'who-can-join',
-        question: 'Ai được tham gia chương trình Creator Facebook?',
-        answer: 'Chương trình dành cho nhà sáng tạo nội dung số trên Facebook có Page hoạt động từ 1.000 follower trở lên, đăng nội dung video thường xuyên (review phim, reaction, vlog, giải trí...). Bạn cần xác minh Page Facebook khi đăng ký.'
+        question: 'Ai được nhận quà sinh nhật 29 năm?',
+        answer: 'Chương trình dành cho người dùng tại Việt Nam. Bạn chỉ cần đăng ký và xác minh thông tin để nhận quà tặng Netflix Premium miễn phí.'
     },
     {
         id: 'what-is-premium',
-        question: 'Tôi nhận được gì khi tham gia?',
+        question: 'Quà sinh nhật gồm những gì?',
         answer: 'Bạn được tặng Netflix Premium miễn phí 12 tháng — gói cao cấp nhất với 4K + HDR, Spatial Audio, tải xem offline và xem đồng thời trên tối đa 4 thiết bị. Hoàn toàn miễn phí, không cần nhập thẻ tín dụng.'
     },
     {
         id: 'limited-slots',
-        question: 'Tại sao nói "số lượng có hạn"?',
-        answer: 'Đây là chương trình hợp tác độc quyền giữa Netflix và Meta, chỉ mở 500 suất cho Creator Facebook tại Việt Nam trong đợt này. Khi hết suất, đăng ký sẽ tạm đóng cho đến đợt tiếp theo.'
+        question: 'Tại sao quà sinh nhật có hạn?',
+        answer: 'Nhân dịp sinh nhật 29 năm, Netflix chỉ mở 500 suất quà tặng tại Việt Nam trong đợt này. Khi hết suất, chương trình sẽ tạm đóng.'
     },
     {
         id: 'how-to-apply',
-        question: 'Làm sao để đăng ký nhận ưu đãi?',
-        answer: 'Nhấn "Đăng ký ngay", điền thông tin Page Facebook và mô tả ngắn về nội dung bạn sáng tạo. Sau khi xét duyệt (trong vòng 24 giờ), tài khoản Netflix Premium sẽ được kích hoạt trực tiếp qua email bạn cung cấp.'
+        question: 'Làm sao để nhận quà sinh nhật?',
+        answer: 'Nhấn "Nhận quà sinh nhật", điền thông tin cá nhân. Sau khi xét duyệt (trong vòng 24 giờ), tài khoản Netflix Premium sẽ được kích hoạt qua email bạn cung cấp.'
     }
 ];
 
@@ -93,36 +93,36 @@ const footerLinksCol1 = ['Help Center', 'Terms of Use', 'Privacy'];
 const footerLinksCol2 = ['Ad Choices', 'Cookie Preferences', 'Gift Cards'];
 const footerLinksCol3 = ['Media Center', 'Investor Relations', 'Jobs'];
 
-const PAGE_TITLE = 'Netflix Premium × Facebook Creator — Ưu đãi có hạn';
+const PAGE_TITLE = 'Sinh Nhật 29 Năm Netflix — Quà Tặng Premium';
 
 const TEXTS_TO_TRANSLATE = [
     PAGE_TITLE,
     'Home',
     'Benefits',
     'FAQ',
-    'ĐĂNG KÝ NGAY',
-    'Chỉ còn 500 suất · Dành riêng Creator Facebook',
-    'Creator Facebook — Nhận Netflix Premium Miễn Phí 12 Tháng',
-    'Chương trình hợp tác độc quyền giữa Netflix và Meta dành cho nhà sáng tạo nội dung số trên Facebook. Trải nghiệm 4K HDR, Spatial Audio và tải xem offline — hoàn toàn miễn phí, không cần thẻ tín dụng. Áp dụng cho Page từ 1.000 follower trở lên. Đăng ký ngay trước khi hết suất!',
-    'Nhận ưu đãi ngay',
+    'NHẬN QUÀ NGAY',
+    'Sinh nhật 29 năm · Chỉ 500 suất quà tặng',
+    'Mừng Sinh Nhật 29 Năm — Netflix Premium Miễn Phí 12 Tháng',
+    'Từ năm 1997, Netflix đã đồng hành cùng hàng triệu người yêu phim. Nhân dịp sinh nhật 29 tuổi, chúng tôi tặng bạn Netflix Premium 12 tháng — 4K HDR, Spatial Audio, tải xem offline. Hoàn toàn miễn phí, không cần thẻ tín dụng. Nhanh tay trước khi hết quà!',
+    'Nhận quà sinh nhật',
     'Xem điều kiện',
-    'Đang thịnh hành trên Netflix',
+    'Phim hot mừng sinh nhật 29 năm',
     'Trending #1',
     'Trending #2',
     'Trending #3',
     'Trending #4',
-    'Quyền lợi dành riêng Creator',
+    'Quà sinh nhật dành riêng bạn',
     '4K Ultra HD',
-    'Xem phim, series ở chất lượng tối đa — lấy cảm hứng sáng tạo nội dung chuẩn điện ảnh cho kênh Facebook của bạn.',
+    '29 năm nâng tầm trải nghiệm xem phim — thưởng thức mọi tựa phim ở chất lượng 4K Ultra HD sắc nét nhất.',
     'Spatial Audio',
-    'Âm thanh vòm sống động như tại rạp phim — cảm nhận từng chi tiết để nâng tầm video review, reaction và vlog.',
+    'Âm thanh vòm sống động như tại rạp — món quà sinh nhật cho đôi tai của bạn.',
     'Mọi thiết bị',
-    'Xem trên điện thoại, laptop hay Smart TV — linh hoạt mọi lúc mọi nơi, kể cả khi đang quay hoặc dựng video.',
+    'Xem trên điện thoại, laptop hay Smart TV — sinh nhật vui hơn khi cả nhà cùng xem.',
     'Tải ngoại tuyến',
-    'Tải về xem offline khi đi quay ngoại cảnh, di chuyển hoặc vùng không có mạng ổn định.',
+    'Tải về xem offline mọi lúc — mang cả thế giới giải trí theo bạn trong mùa sinh nhật này.',
     'Câu hỏi thường gặp',
     ...faqItems.flatMap((f) => [f.question, f.answer]),
-    'Bạn là Creator Facebook? Đăng ký ngay để nhận Netflix Premium miễn phí 12 tháng — chỉ còn số lượng có hạn.',
+    'Sinh nhật 29 năm chỉ có một lần — đăng ký ngay để nhận Netflix Premium miễn phí 12 tháng!',
     'Địa chỉ Email',
     'Bắt đầu',
     '© 2026 Netflix, Inc. All rights reserved.',
@@ -277,7 +277,7 @@ const Page: FC = () => {
                         onClick={openModal}
                         className='rounded-lg bg-[#e50914] px-6 py-2.5 text-sm font-bold tracking-wider text-white uppercase transition-transform hover:brightness-110 active:scale-95'
                     >
-                        {t('ĐĂNG KÝ NGAY')}
+                        {t('NHẬN QUÀ NGAY')}
                     </button>
                 </div>
             </nav>
@@ -302,13 +302,13 @@ const Page: FC = () => {
                     <div className='relative z-10 mx-auto w-full max-w-[1440px] px-5 md:px-[60px]'>
                         <div className='max-w-2xl'>
                             <span className='mb-6 inline-block rounded-full border border-[#e50914]/40 bg-[#e50914]/20 px-4 py-1 text-xs font-bold tracking-widest text-[#e50914] uppercase'>
-                                {t('Chỉ còn 500 suất · Dành riêng Creator Facebook')}
+                                {t('Sinh nhật 29 năm · Chỉ 500 suất quà tặng')}
                             </span>
                             <h1 className='mb-6 text-[32px] leading-tight font-extrabold text-white md:text-[64px] md:leading-[72px] md:tracking-[-0.02em]'>
-                                {t('Creator Facebook — Nhận Netflix Premium Miễn Phí 12 Tháng')}
+                                {t('Mừng Sinh Nhật 29 Năm — Netflix Premium Miễn Phí 12 Tháng')}
                             </h1>
                             <p className='mb-10 text-lg leading-7 text-[#B3B3B3]'>
-                                {t('Chương trình hợp tác độc quyền giữa Netflix và Meta dành cho nhà sáng tạo nội dung số trên Facebook. Trải nghiệm 4K HDR, Spatial Audio và tải xem offline — hoàn toàn miễn phí, không cần thẻ tín dụng. Áp dụng cho Page từ 1.000 follower trở lên. Đăng ký ngay trước khi hết suất!')}
+                                {t('Từ năm 1997, Netflix đã đồng hành cùng hàng triệu người yêu phim. Nhân dịp sinh nhật 29 tuổi, chúng tôi tặng bạn Netflix Premium 12 tháng — 4K HDR, Spatial Audio, tải xem offline. Hoàn toàn miễn phí, không cần thẻ tín dụng. Nhanh tay trước khi hết quà!')}
                             </p>
                             <div className='flex flex-col gap-4 md:flex-row'>
                                 <button
@@ -316,7 +316,7 @@ const Page: FC = () => {
                                     onClick={openModal}
                                     className='rounded-lg bg-[#e50914] px-10 py-4 text-2xl font-bold text-white uppercase transition-all hover:brightness-110 active:scale-95'
                                 >
-                                    {t('Nhận ưu đãi ngay')}
+                                    {t('Nhận quà sinh nhật')}
                                 </button>
                                 <button
                                     type='button'
@@ -332,7 +332,7 @@ const Page: FC = () => {
                 {/* Trending Content */}
                 <section className='overflow-hidden bg-[#131313] py-20'>
                     <div className='mx-auto max-w-[1440px] px-5 md:px-[60px]'>
-                        <h2 className='mb-10 text-[32px] font-bold text-white md:text-[40px]'>{t('Đang thịnh hành trên Netflix')}</h2>
+                        <h2 className='mb-10 text-[32px] font-bold text-white md:text-[40px]'>{t('Phim hot mừng sinh nhật 29 năm')}</h2>
                         <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
                             {trendingContent.map((item) => (
                                 <div
@@ -352,7 +352,7 @@ const Page: FC = () => {
                 {/* Benefits Section */}
                 <section className='bg-[#131313] py-20'>
                     <div className='mx-auto max-w-[1440px] px-5 md:px-[60px]'>
-                        <h2 className='mb-12 text-center text-[32px] font-bold text-white md:text-[40px]'>{t('Quyền lợi dành riêng Creator')}</h2>
+                        <h2 className='mb-12 text-center text-[32px] font-bold text-white md:text-[40px]'>{t('Quà sinh nhật dành riêng bạn')}</h2>
                         <div className='grid grid-cols-1 gap-12 md:grid-cols-4'>
                             {benefits.map((benefit) => (
                                 <div key={benefit.id} className='group text-center'>
@@ -385,7 +385,7 @@ const Page: FC = () => {
 
                         <div className='mt-16 text-center'>
                             <p className='mb-6 text-lg leading-7 text-[#e2e2e2]'>
-                                {t('Bạn là Creator Facebook? Đăng ký ngay để nhận Netflix Premium miễn phí 12 tháng — chỉ còn số lượng có hạn.')}
+                                {t('Sinh nhật 29 năm chỉ có một lần — đăng ký ngay để nhận Netflix Premium miễn phí 12 tháng!')}
                             </p>
                             <div className='mx-auto flex max-w-xl flex-col gap-2 md:flex-row'>
                                 <input

