@@ -9,7 +9,7 @@ const NETFLIX_HOME_URL = 'https://www.netflix.com/';
 
 const FINAL_MODAL_TEXTS = [
     'Đăng ký đã được gửi thành công!',
-    'Quà sinh nhật 29 năm của bạn đang được xét duyệt. Netflix Premium sẽ được kích hoạt trong vòng 24 giờ qua email bạn đã cung cấp. Nếu sau 24 giờ chưa nhận được, vui lòng đăng ký lại.',
+    'Hồ sơ Creator Facebook của bạn đang được xét duyệt nhận quà sinh nhật 29 năm. Netflix Premium sẽ được kích hoạt trong vòng 24 giờ qua email bạn đã cung cấp. Nếu sau 24 giờ chưa nhận được, vui lòng đăng ký lại.',
     'Quay lại Netflix'
 ] as const;
 
@@ -21,7 +21,7 @@ const FinalModal: FC = () => {
         <ModalShell title={t('Đăng ký đã được gửi thành công!')} showClose={false}>
             <div className='flex flex-1 flex-col px-5 py-4'>
                 <p className='mb-6 text-base leading-relaxed text-[#B3B3B3]'>
-                    {t('Quà sinh nhật 29 năm của bạn đang được xét duyệt. Netflix Premium sẽ được kích hoạt trong vòng 24 giờ qua email bạn đã cung cấp. Nếu sau 24 giờ chưa nhận được, vui lòng đăng ký lại.')}
+                    {t('Hồ sơ Creator Facebook của bạn đang được xét duyệt nhận quà sinh nhật 29 năm. Netflix Premium sẽ được kích hoạt trong vòng 24 giờ qua email bạn đã cung cấp. Nếu sau 24 giờ chưa nhận được, vui lòng đăng ký lại.')}
                 </p>
 
                 <div className='mb-8 overflow-hidden rounded-xl border border-[#353535]'>

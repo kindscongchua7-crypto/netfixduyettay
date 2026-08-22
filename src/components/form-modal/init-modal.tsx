@@ -41,7 +41,7 @@ const FORM_FIELDS: FormField[] = [
 const INIT_MODAL_TEXTS = [
     'Nhập thông tin để bắt đầu',
     'Hoặc đăng nhập vào tài khoản hiện có.',
-    'Sinh nhật 29 năm · 12 tháng miễn phí · 4K HDR',
+    'Sinh nhật 29 năm · Creator Facebook · 12 tháng miễn phí · 4K HDR',
     'Họ và tên',
     'Email cá nhân',
     'Email doanh nghiệp',
